@@ -1,5 +1,1 @@
-const func = () => {
-	console.log('test')
-}
-
-export default func
+require('../style/test.sass')

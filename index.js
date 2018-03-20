@@ -1,20 +1,10 @@
+require('babel-core/register')(
+	{
+		presets: ['stage-2', 'es2015']
+	}
+)
 
-//-----一期------//
-//搜索
-	//热词推荐 站内搜索 
-//分类导航
+require('babel-polyfill')
 
-//快讯
-
-//特色区块
-
-//热门推荐
-
-//行情动态
-
-//实用工具
-
-//小白专区
-
-//-----二期------//
-//站内聊天
+process.env.NODE_ENV = 'production'
+require('./build/build.js')

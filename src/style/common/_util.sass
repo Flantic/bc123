@@ -1,0 +1,78 @@
+/**
+ * sass变量,mixins,样式合集
+ * 1.变量直接使用
+ * 2.样式合集用extends继承
+ * 3.mixin用@include引用
+ */
+
+/* 变量 */
+
+	
+
+
+/* 样式合集 */ 
+%flex 
+	display: flex
+	// flex-direction: row 
+	// justify-content: flex-start
+	// align-items: flex-start
+
+/* flex 水平方向 [ left |　center | right | between | around ] */
+@mixin flex-row($arg)
+	@extend %flex
+	@if $arg == 'left'
+		justify-content: flex-start
+	@else if  $arg == 'center'
+		justify-content: center
+	@else if  $arg == 'right'
+		justify-content: flex-end
+	@else if  $arg == 'between'
+		justify-content: space-between
+	@else if $arg == 'around'
+		justify-content: space-around
+
+/* flex 垂直方向 [ top |　center | bottom | baseline | stretch ] */	
+@mixin flex-col($arg)
+	@extend %flex
+	flex-direction: column 
+	@if $arg == 'top'
+		align-items: flex-start
+	@else if  $arg == 'center'
+		align-items: center
+	@else if  $arg == 'bottom'
+		align-items: flex-end
+	@else if  $arg == 'baseline'
+		align-items: baseline
+	@else if $arg == 'stretch'
+		align-items: stretch
+
+/* flex 多根轴线方向 [ top |　center | bottom | between | around | stretch ] */	
+@mixin flex-align($arg)
+	@extends %flex
+	@if $arg == 'top'
+		align-items: flex-start
+	@else if  $arg == 'center'
+		align-items: center
+	@else if  $arg == 'bottom'
+		align-items: flex-end
+	@else if  $arg == 'between'
+		align-items: space-between
+	@else if $arg == 'around'
+		justify-content: space-around
+	@else if $arg == 'stretch'
+		justify-content: stretch
+
+@mixin border($size,$color)
+	border: $size solid $color
+@mixin radius-left($size)
+	border-top-left-radius: $size
+	border-bottom-left-radius: $size
+@mixin radius-right($size)
+	border-top-right-radius: $size
+	border-bottom-right-radius: $size
+@mixin radius-top($size)
+	border-top-left-radius: $size
+	border-top-right-radius: $size
+@mixin radius-bottom($size)
+	border-bottom-left-radius: $size
+	border-bottom-right-radius: $size

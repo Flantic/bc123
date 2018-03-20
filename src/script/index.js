@@ -1,0 +1,2 @@
+
+import fastClick from 'fastclick'
