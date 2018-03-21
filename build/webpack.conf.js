@@ -27,10 +27,11 @@ files.forEach(function (item) {
 	var name = path.basename(item, '.js');
 	newEntry[name] = item
 	htmlTemp.push(new HtmlWebpackPlugin({
-		filename: `${Output}/temp/${name}.html`,
+		filename: `${Output}/${name}.html`,
 		template: `${BaseUrl}/temp/${name}.html`,
 		chunks: ['vendor', 'common', name],
-		chunksSortMode: 'manual',
+		// chunksSortMode: 'manual',
+		chunksSortMode: 'dependency',
 		inject: true,
 		minify: {
 			removeComments: isDevelopment,
@@ -92,10 +93,10 @@ var webpackConfig = {
 					loader: 'html-loader'
 				}
 			},
-			{
-				test: require.resolve('jquery'),
-				loader: 'expose-loader?$!expose-loader?jQuery', // jQuery and $
-			},
+			// {
+			// 	test: require.resolve('jquery'),
+			// 	loader: 'expose-loader?$!expose-loader?jQuery', // jQuery and $
+			// },
 		]
 	},
 	plugins: [
@@ -153,10 +154,8 @@ var webpackConfig = {
 }
 
 webpackConfig.plugins.push(...htmlTemp)
+// webpackConfig.plugins.push(new FriendlyErrorsPlugin())
 
-if (isDevelopment) {
-	webpackConfig.plugins.push(new FriendlyErrorsPlugin())
-}
-
+console.log(webpackConfig.plugins)
 
 export default webpackConfig
