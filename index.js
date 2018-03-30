@@ -4,7 +4,7 @@ require('babel-core/register')(
 	}
 )
 
-require('babel-polyfill')
+require('babel-polyfill') 
 
 process.env.NODE_ENV = 'production'
 require('./build/build.js')
