@@ -92,10 +92,10 @@ var webpackConfig = {
 					loader: 'html-loader'
 				}
 			},
-			{
-				test: require.resolve('jquery'),
-				loader: 'expose-loader?$!expose-loader?jQuery', // jQuery and $
-			},
+			// {
+			// 	test: require.resolve('jquery'),
+			// 	loader: 'expose-loader?$!expose-loader?jQuery', // jQuery and $
+			// },
 		]
 	},
 	plugins: [
