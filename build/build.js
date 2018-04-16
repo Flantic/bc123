@@ -11,7 +11,9 @@ compiler.run((err, stats) => {
 		}
 		return;
 	}
+
 	const info = stats.toJson();
+
 	if (stats.hasErrors()) {
 		console.error(info.errors);
 	}
