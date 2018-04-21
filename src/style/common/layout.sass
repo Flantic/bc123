@@ -1,80 +1,29 @@
-@import 'reset'
-@import 'util'
+@import 'util'  // sass变量方法
+@import 'reset' // css重置样式
+@import 'icon'  // 图标库样式
+@import 'func'  // css功能性样式
 
-//清除浮动
-.clearfix 
-	*zoom: 1
-	&:before, 
-	&:after  
-		content: " "
-		display: table
-	&:after 
-		clear: both
+
 //原子类
 .page-all
 	width: 1200px
 	margin: 0 auto
-.mb30
+.mb30 
 	margin-bottom: 30px
 input[type="password"],
 input[type="text"]
 	padding: 0 10px
 	border: none
 	border-radius: 5px
+
 //页面结构通用样式
-.header-container
-	@include flex-row(left)
-	height: 70px
-.site-header
-	margin-bottom: 30px
-	line-height: 70px
-	background: #333 
-	border-bottom: 1px solid #ddd
-	.header-logo
-		width: 180px
-		background: orange
-	.header-user
-		flex-grow: 1
-		@include flex-row(right)
-	.header-nav
-		margin-left: 90px
-		.nav-list
-			@include flex-row(left)
-	.nav-item
-		width: 60px
-		&>a 
-			font-size: 16px
-			color: #fff
-			text-shadow: 1px 1px 1px #000
-	.header-user
-		.exit-btn,
-		.login-btn,
-		.register-btn
-			margin-left: 10px
-			padding: 0 10px
-			font-size: 14px
-			color: #fff
-		.user-head>img 
-			width: 100%
-		.user-head
-			align-self: center
-			width: 50px
-			height: 50px
-			cursor: pointer
-			overflow: hidden
-			border-radius: 50%
-		.user-cont
-			@include flex-col(left)
-			@include flex-row(center)
-			text-align: left
-			color: #fff
-			width: 180px
-			padding: 0 10px
-		.user-name
-			font-size: 14px
-			line-height: 1.8
-		.user-sign
-			font-size: 12px
-			line-height: 1.4
-		
-		
+body, button, input, keygen, legend, select, textarea
+	font-family: 'Microsoft YaHei'
+body
+	background: #f5f5f5
+	font-size: 14px
+.fcc-page-all
+	margin: 0 auto
+	width: 1200px
+.see-more>a
+	color: #fe8100

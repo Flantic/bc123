@@ -1,7 +1,7 @@
 //功能样式
-
+//----------------------------------------------
 //清除浮动
-.clearfix 
+.clearfix
 	*zoom: 1
 	&:before, 
 	&:after  
@@ -9,3 +9,8 @@
 		display: table
 	&:after 
 		clear: both
+//单行文字溢出隐藏
+.text-overflow
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis

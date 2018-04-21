@@ -1,94 +1,8 @@
 @import './common/layout'
+@import './component/header'
+@import './component/side' 
+@import './component/footer'
 
-body, button, input, keygen, legend, select, textarea
-	font-family: 'Microsoft YaHei'
-body
-	background: #f5f5f5
-.mb30
-	margin-bottom: 30px
-.fcc-page-all
-	margin: 0 auto
-	width: 1200px
-.fcc-header
-	background: #fff
-	box-shadow: 0 2px 3px #eee
-	.fcc-top-nav
-		height: 70px
-		line-height: 70px
-		background: #333
-		box-shadow: 0 1px 2px #eee
-.fcc-topnav-list
-	.nav-item
-		float: left
-		font-size: 16px
-		color: #fff
-		text-shadow: 0px 1px 1px #000
-		padding: 0 20px
-	.nav-item>a
-		color: #fff
-	.nav-item.active>a
-		color: #fe8100
-.fcc-search-panle-box
-	padding-top: 30px
-	height: 170px
-	margin-bottom: 30px
-	// background: #fff
-	.fcc-logo
-		float: left
-		width: 200px
-		height: 120px
-		margin-left: 80px
-		background: #eee
-	.fcc-search
-		float: left
-		margin-top: 30px
-		width: 638px
-		height: 40px
-		line-height: 40px
-		margin-left: 110px
-		.fcc-hotsearchText
-			line-height: 30px
-		.fcc-hotsearchText li
-			float: left
-			padding: 0 15px
-		.fcc-hotsearchText>a
-			font-size: 12px
-			color: #333
-		.fcc-hotsearchText li.hot>a
-			color: #fe8100
-	.fcc-ad-01
-		float: right
-		margin-top: 30px
-		width: 200px
-		height: 40px
-		background: #eee
-	.input-group
-		.group-text
-			float: left
-			width: 535px
-			height: 40px
-			font-size: 16px
-			padding-left: 20px
-			border: 1px solid #eee
-			border-right: none
-			border-top-left-radius: 5px
-			border-bottom-left-radius: 5px
-		.group-btn
-			float: left
-			border: none
-			width: 102px
-			height: 40px
-			background: #fe8100
-			color: #fff
-			font-size: 16px
-			border-top-right-radius: 8px
-			border-bottom-right-radius: 8px
-.fcc-hotsearchText
-	height: 20px
-
-.side-block
-	float: left
-	width: 360px
 .main-block
 	float: left
 	width: 810px
@@ -98,41 +12,6 @@ body
 	background: #fff
 	padding: 25px
 	box-shadow: 1px 1px 5px #eee
-// candy style--------------------
-.fcc-block-candy
-	height: 306px
-	.fcc-block-candy-title
-		text-align: center
-		padding: 0 0 30px
-		font-size: 16px
-	.fcc-block-candy-content
-		height: 300px
-	.candy-list
-		margin-right: -15px
-	.candy-list>li
-		float: left
-		width: 70px
-		height: 70px
-		text-align: center
-		border: 1px solid #fe8100
-		border-radius: 5px 
-		margin-right: 10px
-		margin-bottom: 30px
-		.text-box
-			height: 40px
-			font-size: 12px
-			line-height: 1.5
-			color: #333	
-		.text-box>p:first
-			font-weight: 700
-			line-height: 2
-		.get-now
-			display: block
-			width: 100%
-			height: 30px
-			line-height: 30px
-			color: #fe8100
-			border-top: 1px solid #fe8100
 //-----------------------------------
 .fcc-block-msg
 	.fcc-block-msg-title
@@ -140,15 +19,37 @@ body
 		line-height: 35px
 		font-size: 16px
 		border-bottom: 1px solid #eee
+		.title-item
+			float: left
+			text-align: center
+			width: 50%
+		.title-item.active
+			color: #fe8100
 	.fcc-block-msg-content
-		height: 300px
+		// height: 300px
 .fcc-block-search
 	.fcc-block-search-title
+		text-align: center
 		height: 35px
 		font-size: 16px
 		line-height: 35px
+		border-bottom: 1px solid #eee
+		color: #fe8100
 	.fcc-block-search-content
-		height: 300px
+		// height: 300px
+.fcc-block-search-content
+	padding: 15px 0 0 0
+	font-size: 14px
+	.list-warpper
+		height: 150px
+		max-height: 280px
+		overflow: hidden
+	.list-item
+		line-height: 35px
+		.item-right>a
+			color: #fe8100
+		.item-right
+			float: right	
 .fcc-block-nav
 	.fcc-block-title
 		font-size: 16px
@@ -207,12 +108,15 @@ body
 	.item-list>li
 		float: left
 		font-size: 14px
-		padding: 5px 10px
+		padding: 5px 10px 
 	.item-list>li>a
 		color: #333
 	.item-list>li.hot>a
 		color: #fe8100
-	.see-more
+.fcc-block-item-content,
+.fcc-block-msg-content,
+.fcc-block-search-content
+	.see-more 
 		display: block
 		margin: 0 auto
 		margin-top: 20px
@@ -226,5 +130,49 @@ body
 		cursor: pointer
 		background: #fff
 		border-radius: 5px
+
+// .fcc-ad-01,
+.fcc-classify-item.fcc-ad-02
+	padding: 0
+	overflow: hidden
+	height: 146px
+	img
+		width: 100%
+//-----------------------------------
+.fcc-block-msg-content
+	padding: 15px 0 0 0
+	.msg-list-warp
+		height: 150px
+		max-height: 280px
+		overflow: hidden
+	.list-item
+		position: relative
+		line-height: 40px
+		text-indent: 1.5em
+		font-size: 14px
+		.text-overflow
+			display: block
+		&:before,
+		&:after
+			position: absolute
+			content: ''
+			display: block
+			background: #eee
+		&:before
+			width: 10px
+			height: 10px
+			left: 0
+			top: 14px
+			background: #eee
+			border-radius: 50%
+		&:after
+			width: 2px
+			height: 50px
+			left: 4px
+			top: 15px
+			background: #eee
+	.list-item:last-child
+		&:after
+			height: 0
 
 		

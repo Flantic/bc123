@@ -1,12 +1,23 @@
-import webpack from 'webpack'
-import glob from 'glob'
-import path from 'path'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import OptimizeCSSPlugin from 'optimize-css-assets-webpack-plugin'
-import FriendlyErrorsPlugin from 'friendly-errors-webpack-plugin'
-import CopyWebpackPlugin from 'copy-webpack-plugin'
-import CleanWebpackPlugin from 'clean-webpack-plugin'
+// import webpack from 'webpack'
+// import glob from 'glob'
+// import path from 'path'
+// import HtmlWebpackPlugin from 'html-webpack-plugin'
+// import ExtractTextPlugin from 'extract-text-webpack-plugin'
+// import OptimizeCSSPlugin from 'optimize-css-assets-webpack-plugin'
+// import FriendlyErrorsPlugin from 'friendly-errors-webpack-plugin'
+// import CopyWebpackPlugin from 'copy-webpack-plugin'
+// import CleanWebpackPlugin from 'clean-webpack-plugin'
+
+const webpack = require('webpack')
+const glob = require('glob')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+
 
 var Context = process.env.NODE_ENV
 var isDevelopment = Context == "development"
@@ -22,7 +33,7 @@ const Util = {
 var files = glob.sync('./src/**/*.js')
 var newEntry = {}
 var htmlTemp = []
-
+// console.log(files)
 files.forEach(function (item) {
 	var name = path.basename(item, '.js');
 	newEntry[name] = item
@@ -156,6 +167,5 @@ var webpackConfig = {
 webpackConfig.plugins.push(...htmlTemp)
 // webpackConfig.plugins.push(new FriendlyErrorsPlugin())
 
-console.log(webpackConfig.plugins)
-
-export default webpackConfig
+module.exports = webpackConfig
+// export default webpackConfig

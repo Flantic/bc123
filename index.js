@@ -6,5 +6,8 @@ require('babel-core/register')(
 
 require('babel-polyfill') 
 
-process.env.NODE_ENV = 'production'
-require('./build/build.js')
+if(process.env.NODE_ENV == 'production'){
+	require('./build/build.js')
+}else{
+	require('./build/dev-server.js')
+}
