@@ -52,7 +52,7 @@ files.forEach(function (item) {
 	}))
 })
 
-
+console.log(files)
 var webpackConfig = {
 	entry: newEntry,
 	output: {

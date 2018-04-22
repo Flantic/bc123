@@ -1,0 +1,79 @@
+@import './common/layout'
+@import './component/header'
+@import './component/footer'
+@import './component/side'
+ 
+.fcc-header
+    box-shadow: 0 0 0 
+body
+    background: -webkit-linear-gradient(right top, #845094 , #b25c57)
+    background: -o-linear-gradient(bottom left, #845094, #b25c57)
+    background: -moz-linear-gradient(bottom left, #845094, #b25c57)
+    background: linear-gradient(to bottom left, #845094 , #b25c57)
+
+.candy-box
+    margin-top: 45px
+.candy-box-title
+    font-size: 25px
+    height: 50px
+    line-height: 50px
+    text-align: center
+    color: #fff
+    .title-item
+        display: inline-block
+        height: 100%
+        cursor: pointer
+        border-bottom: 2px solid #fe8100
+        &.active
+            color: #fe8100
+    .title-item:last-child
+        margin-left: 260px
+.candy-box-warpper
+    padding: 80px 0
+.candy-box-list
+    margin-right: -80px
+.candy-box-item
+    position: relative
+    float: left
+    margin-right: 80px
+    margin-bottom: 90px
+    padding: 30px
+    width: 240px
+    height: 290px
+    color: #fe8100
+    text-align: center
+    border-radius: 5px
+    background: #fff
+    &:after
+        content: ''
+        display: block
+        position: absolute
+        bottom: -15px
+        left: 5%
+        width: 90%
+        height: 100%
+        border-radius: 5px
+        background: rgba(255,255,255,.3)
+    .item-title
+        font-size: 18px
+        margin-bottom: 20px
+        font-weight: 700
+    .item-quantite
+        font-size: 30px
+        margin-bottom: 30px
+    .item-recevoir-btn
+        margin: 0 auto
+        width: 150px
+        height: 44px
+        line-height: 44px
+        text-align: center
+        color: #fe8100
+        border: 1px solide #fe8100
+        border-radius: 5px
+        margin-bottom: 30px
+        border: 1px solid #fe8100
+    .item-other
+        font-size: 12px 
+        color: #fe8100
+
+

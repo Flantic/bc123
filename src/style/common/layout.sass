@@ -4,10 +4,14 @@
 @import 'func'  // css功能性样式
 
 
-//原子类
+//原子类----------------------------------------------------
 .page-all
 	width: 1200px
 	margin: 0 auto
+.fl
+	float: left
+.fr
+	float: right
 .mb30 
 	margin-bottom: 30px
 input[type="password"],
@@ -16,7 +20,7 @@ input[type="text"]
 	border: none
 	border-radius: 5px
 
-//页面结构通用样式
+// 页面结构通用样式--------------------------------------------
 body, button, input, keygen, legend, select, textarea
 	font-family: 'Microsoft YaHei'
 body
@@ -25,5 +29,88 @@ body
 .fcc-page-all
 	margin: 0 auto
 	width: 1200px
+.main-block
+	width: 810px
+	margin-left: 30px
 .see-more>a
 	color: #fe8100
+
+// 公用组件样式
+// 查看更多通用样式
+.see-more 
+	display: block
+	margin: 0 auto
+	margin-top: 20px
+	width: 160px
+	height: 40px
+	line-height: 40px
+	text-align: center
+	border: 1px solid #fe8100
+	font-size: 16px
+	color: #fe8100
+	cursor: pointer
+	background: #fff
+	border-radius: 5px
+	transition: all .25s
+	&:hover
+		background: #fe8100
+		color: #fff
+// 媒体资讯样式------------------------------------------------
+.fcc-media-information
+	padding-bottom: 25px
+	background: #fff
+	.fcc-block-title
+		height: 70px
+		line-height: 70px
+		border-bottom: 1px solid #eee
+	.media-info-list-warpper
+		padding: 0 25px
+	.media-nav-list
+		padding-left: 30px
+		.list-item
+			float: left
+			text-align: center
+			margin-right: 25px
+		.list-item.active>a
+			color: #fe8100
+	.media-info-list
+		.list-item
+			padding: 25px 0
+			border-bottom: 1px solid #eee
+		.list-item:last-child
+			border: none
+		.item-img
+			float: left
+			width: 300px
+			height: 180px
+			background: #eee
+			border-radius: 5px
+			overflow: hidden
+			>img
+				display: block
+				width: 100%
+			.img-warpper
+		.item-text
+			position: relative
+			height: 180px
+			width: 440px
+			float: left
+			margin-left: 20px
+		.item-title
+			font-size: 16px
+			font-weight: 700
+			margin-bottom: 15px
+		.item-cont
+			max-height: 110px
+			font-size: 14px
+			line-height: 1.5
+		.item-other
+			position: absolute
+			bottom: 0
+			left: 0
+			line-height: 24px
+			width: 100%
+			font-size: 12px
+		.other-right
+			float: right
+

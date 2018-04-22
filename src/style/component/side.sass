@@ -1,12 +1,21 @@
-//侧边栏 通用样式
-//整体框架
+// 侧边栏 通用样式
+// 整体框架
 .side-block
-	float: left
 	width: 360px
-	.fcc-classify-item
-		padding-top: 16px
-
-// candy style--------------------
+	.fcc-side-item
+		padding: 0
+    	overflow: hidden
+    	height: 146px
+		padding: 25px
+		// padding-top: 16px
+		background: #fff
+	.fcc-ad-side
+		width: 360px
+		height: 305px
+		background: #eee
+		>img
+			width: 100%
+// 糖果&&空投样式----------------------------------------
 .fcc-block-candy
 	position: relative
 	height: 306px
@@ -21,7 +30,7 @@
 	.fcc-block-candy-content
 		max-height: 300px
 		overflow: hidden
-		.see-more
+		.see-more-text
 			position: absolute
 			right: 25px
 			bottom: 25px
@@ -52,3 +61,84 @@
 			line-height: 30px
 			color: #fe8100
 			border-top: 1px solid #fe8100
+
+// 活动&&快讯样式----------------------------------------
+.fcc-block-msg-content
+	padding: 15px 0 0 0
+	.msg-list-warp
+		height: 150px
+		max-height: 280px
+		overflow: hidden
+	.list-item
+		position: relative
+		line-height: 40px
+		text-indent: 1.5em
+		font-size: 14px
+		.text-overflow
+			display: block
+		&:before,
+		&:after
+			position: absolute
+			content: ''
+			display: block
+			background: #eee
+		&:before
+			width: 10px
+			height: 10px
+			left: 0
+			top: 14px
+			background: #eee
+			border-radius: 50%
+		&:after
+			width: 2px
+			height: 50px
+			left: 4px
+			top: 15px
+			background: #eee
+	.list-item:last-child
+		&:after
+			height: 0
+.fcc-block-msg
+	.fcc-block-msg-title
+		height: 35px
+		line-height: 35px
+		font-size: 16px
+		border-bottom: 1px solid #eee
+		.title-item
+			float: left
+			text-align: center
+			width: 50%
+		.title-item.active
+			color: #fe8100
+
+// 区块查询样式-----------------------------------------------
+.fcc-block-search
+	.fcc-block-search-title
+		text-align: center
+		height: 35px
+		font-size: 16px
+		line-height: 35px
+		border-bottom: 1px solid #eee
+		color: #fe8100
+	.fcc-block-search-content
+		// height: 300px
+.fcc-block-search-content
+	padding: 15px 0 0 0
+	font-size: 14px
+	.list-warpper
+		height: 150px
+		max-height: 280px
+		overflow: hidden
+	.list-item
+		line-height: 35px
+		.item-right>a
+			color: #fe8100
+		.item-right
+			float: right
+//广告样式-----------------------------------------------
+.fcc-side-item.fcc-ad-02
+	padding: 0
+	overflow: hidden
+	height: 146px
+	img
+		width: 100%

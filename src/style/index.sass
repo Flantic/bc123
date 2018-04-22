@@ -3,53 +3,13 @@
 @import './component/side' 
 @import './component/footer'
 
-.main-block
-	float: left
-	width: 810px
-	margin-left: 30px
-
 .fcc-classify-item
 	background: #fff
 	padding: 25px
 	box-shadow: 1px 1px 5px #eee
 //-----------------------------------
-.fcc-block-msg
-	.fcc-block-msg-title
-		height: 35px
-		line-height: 35px
-		font-size: 16px
-		border-bottom: 1px solid #eee
-		.title-item
-			float: left
-			text-align: center
-			width: 50%
-		.title-item.active
-			color: #fe8100
-	.fcc-block-msg-content
-		// height: 300px
-.fcc-block-search
-	.fcc-block-search-title
-		text-align: center
-		height: 35px
-		font-size: 16px
-		line-height: 35px
-		border-bottom: 1px solid #eee
-		color: #fe8100
-	.fcc-block-search-content
-		// height: 300px
-.fcc-block-search-content
-	padding: 15px 0 0 0
-	font-size: 14px
-	.list-warpper
-		height: 150px
-		max-height: 280px
-		overflow: hidden
-	.list-item
-		line-height: 35px
-		.item-right>a
-			color: #fe8100
-		.item-right
-			float: right	
+
+	
 .fcc-block-nav
 	.fcc-block-title
 		font-size: 16px
@@ -100,8 +60,10 @@
 			font-weight: 700
 			line-height: 1.5
 		.text-box>.text
+			overflow: hidden
 			font-size: 12px
 			line-height: 1.2
+			max-height: 38px
 	.item-list
 		font-size: 14px
 		padding: 5px 10px
@@ -113,66 +75,8 @@
 		color: #333
 	.item-list>li.hot>a
 		color: #fe8100
-.fcc-block-item-content,
-.fcc-block-msg-content,
-.fcc-block-search-content
-	.see-more 
-		display: block
-		margin: 0 auto
-		margin-top: 20px
-		width: 160px
-		height: 40px
-		line-height: 40px
-		text-align: center
-		border: 1px solid #fe8100
-		font-size: 16px
-		color: #fe8100
-		cursor: pointer
-		background: #fff
-		border-radius: 5px
-
-// .fcc-ad-01,
-.fcc-classify-item.fcc-ad-02
-	padding: 0
-	overflow: hidden
-	height: 146px
-	img
-		width: 100%
 //-----------------------------------
-.fcc-block-msg-content
-	padding: 15px 0 0 0
-	.msg-list-warp
-		height: 150px
-		max-height: 280px
-		overflow: hidden
-	.list-item
-		position: relative
-		line-height: 40px
-		text-indent: 1.5em
-		font-size: 14px
-		.text-overflow
-			display: block
-		&:before,
-		&:after
-			position: absolute
-			content: ''
-			display: block
-			background: #eee
-		&:before
-			width: 10px
-			height: 10px
-			left: 0
-			top: 14px
-			background: #eee
-			border-radius: 50%
-		&:after
-			width: 2px
-			height: 50px
-			left: 4px
-			top: 15px
-			background: #eee
-	.list-item:last-child
-		&:after
-			height: 0
 
-		
+
+	
+			
